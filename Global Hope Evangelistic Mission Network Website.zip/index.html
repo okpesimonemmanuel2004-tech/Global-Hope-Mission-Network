@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#12234a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Global Hope">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Global Hope Evangelistic Mission Network | Inspiring Hope, Changing Lives</title>
+<meta name="description" content="Global Hope Evangelistic Mission Network - Winning Souls, Building Lives. A Christian ministry committed to evangelism, discipleship, healing, and global impact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#12234a;--ink:#0d1733;--gold:#e0a526;--gold-d:#b98410;--sky:#e4eaf8;--paper:#f6f7fb;--white:#fff;--text:#2b3550;--muted:#5f6b87;
+--head:'Raleway',system-ui,sans-serif;--body:'Figtree',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--body);color:var(--text);background:var(--paper);line-height:1.65;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--head);color:var(--ink);line-height:1.15;letter-spacing:.01em;font-weight:300;text-transform:lowercase}
+h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:14px}
+h3{font-size:1.35rem;margin-bottom:8px}
+.wrap{width:min(1160px,92%);margin:0 auto}
+section{padding:96px 0}
+.lead{max-width:60ch;color:var(--muted);font-size:1.08rem}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:600 1rem var(--body);transition:background .2s,color .2s}
+.btn-gold{background:var(--gold);color:var(--ink)}.btn-gold:hover{background:#f0b83a}
+.btn-line{border-color:rgba(255,255,255,.6);color:#fff}.btn-line:hover{background:#fff;color:var(--ink)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--ink)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(13,23,51,.96);box-shadow:0 2px 18px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font:700 1.05rem/1.15 var(--head);max-width:300px}
+.brand img{height:46px;width:auto}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{color:#fff;text-decoration:none;font-weight:500;font-size:.97rem;opacity:.9}.menu a:hover{color:var(--gold);opacity:1}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.9rem;cursor:pointer}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;color:#fff;padding:130px 0 90px;position:relative;background:var(--ink) url(images/banner.jpg.png) center/cover fixed;text-align:center}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(13,23,51,.72)}
+.hero .wrap{position:relative}
+.rotor{position:relative;height:1.25em;font-size:clamp(2.4rem,8vw,6.2rem);font-weight:200;color:#fff;margin-bottom:18px}
+.rotor .w{position:absolute;inset:0;opacity:0;transition:opacity .9s}
+.rotor .w.on{opacity:1}
+.rotor .w:first-child{color:var(--gold)}
+.hero p{max-width:58ch;margin:0 auto 32px;font-size:1.1rem;font-weight:300;opacity:.92}
+.hero .row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.motto{margin:44px auto 0;max-width:420px;border-top:1px solid var(--gold);padding-top:16px;font:300 1.15rem/1.4 var(--head);color:#fff}
+/* about */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.photo{position:relative}
+.photo img{border-radius:6px 90px 6px 6px;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--sky)}
+.photo::after{content:"";position:absolute;inset:auto -18px -18px auto;width:55%;height:55%;border:3px solid var(--gold);border-radius:6px 90px 6px 6px;z-index:-1}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 30px}
+.chips span{background:var(--sky);color:var(--navy);padding:7px 16px;border-radius:999px;font-weight:600;font-size:.92rem}
+/* vision */
+.vm{background:var(--navy);color:#dbe3f7}
+.vm h2,.vm h3{color:#fff}
+.vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:44px;border-top:1px solid rgba(255,255,255,.2)}
+.vm-grid>div{padding:36px 40px 12px 0}
+.vm-grid>div+div{padding-left:40px;border-left:1px solid rgba(255,255,255,.2)}
+.vm-grid h3{color:var(--gold);font-size:1.7rem}
+.vm-tag{margin-top:34px;font:700 1.4rem var(--head);color:var(--gold)}
+/* values */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.value{background:var(--white);padding:30px;border-radius:14px;border-top:5px solid var(--gold)}
+.value p{color:var(--muted);font-size:.98rem}
+/* programs */
+.programs{background:var(--white)}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+.prog{background:var(--paper);padding:32px;border-radius:14px;display:flex;flex-direction:column}
+.prog.feat{background:var(--navy);color:#dbe3f7;grid-row:span 1}
+.prog.feat h3{color:#fff}
+.prog .tag{align-self:flex-start;background:var(--gold);color:var(--ink);font-weight:700;font-size:.8rem;padding:3px 12px;border-radius:999px;margin-bottom:12px}
+.prog p{margin-bottom:16px;font-size:.98rem}
+.prog ul{list-style:none;margin-top:auto;border-top:1px solid rgba(127,140,170,.35);padding-top:14px}
+.prog li{padding:3px 0 3px 22px;position:relative;font-weight:500;font-size:.95rem}
+.prog li::before{content:"✝";position:absolute;left:0;color:var(--gold-d);font-size:.8rem}
+/* slvs */
+.slvs{background:var(--ink);color:#d5ddf2}
+.slvs h2{color:#fff}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin:24px 0 30px}
+.topics span{padding:12px 16px;background:rgba(255,255,255,.07);border-left:3px solid var(--gold);font-weight:600;color:#fff}
+.slvs .photo img{aspect-ratio:1;border-radius:90px 6px 6px 6px}
+.slvs .photo::after{border-radius:90px 6px 6px 6px}
+.approved{margin-bottom:26px}
+/* impact */
+.impact{background:var(--gold);color:var(--ink)}
+.impact h2{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px}
+.stat{padding:30px 28px;border-top:2px solid rgba(13,23,51,.35)}
+.stat b{display:block;font:800 clamp(3rem,6vw,4.6rem)/1 var(--head);color:var(--ink)}
+.stat h4{font-size:1.1rem;margin:8px 0 4px}
+.stat p{font-size:.93rem;opacity:.85}
+.verse{background:var(--navy);color:#fff;text-align:center;padding:70px 0}
+.verse blockquote{font:500 clamp(1.2rem,2.4vw,1.7rem)/1.5 var(--head);max-width:880px;margin:0 auto}
+.verse cite{display:block;margin-top:16px;color:var(--gold);font-style:normal;font-weight:600}
+/* commission */
+.commission{background:linear-gradient(rgba(13,23,51,.88),rgba(13,23,51,.88)),url(images/gallery1.jpg.jpg) center/cover fixed;color:#fff;text-align:center}
+.commission h2{color:#fff}
+.commission .lead{color:#dbe3f7}
+.pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:34px 0}
+.pills span{border:2px solid var(--gold);padding:9px 22px;border-radius:999px;font-weight:600}
+/* gallery */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0}
+.filters button{border:2px solid var(--navy);background:none;color:var(--navy);padding:8px 20px;border-radius:999px;font:600 .95rem var(--body);cursor:pointer}
+.filters button.on{background:var(--navy);color:#fff}
+.gal{columns:3 280px;column-gap:16px}
+.gal figure{break-inside:avoid;margin-bottom:16px;position:relative;border-radius:10px;overflow:hidden;background:var(--sky)}
+.gal img{width:100%;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;inset:auto 0 0;padding:30px 16px 12px;color:#fff;font-weight:600;font-size:.92rem;background:linear-gradient(transparent,rgba(13,23,51,.9))}
+/* partner */
+.partner{background:var(--white)}
+.p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:48px 0}
+.p-card{background:var(--paper);padding:28px;border-radius:14px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.p-card p{color:var(--muted);font-size:.97rem}
+.p-card .btn{margin-top:auto;padding:10px 22px;font-size:.93rem}
+.give{background:var(--navy);color:#dbe3f7;border-radius:20px;padding:clamp(24px,5vw,56px)}
+.give h3{color:#fff;font-size:2rem}
+.steps{display:flex;gap:10px;margin:22px 0 30px;flex-wrap:wrap}
+.steps span{padding:6px 16px;border-radius:999px;background:rgba(255,255,255,.1);font-weight:600;font-size:.9rem}
+.steps span.on{background:var(--gold);color:var(--ink)}
+.pane{display:none}.pane.on{display:block}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:18px 0}
+.opt{background:rgba(255,255,255,.08);border:2px solid transparent;color:#fff;text-align:left;padding:18px;border-radius:12px;cursor:pointer;font:500 .95rem/1.4 var(--body)}
+.opt strong{display:block;font:700 1.1rem var(--head);margin-bottom:4px}
+.opt small{color:var(--gold)}
+.opt.on{border-color:var(--gold);background:rgba(224,165,38,.18)}
+.give h4{color:#fff;margin:22px 0 4px;font-size:1.15rem}
+.custom{display:flex;gap:10px;align-items:center;margin-top:14px}
+.custom input{max-width:220px}
+.summary{background:rgba(255,255,255,.08);border-radius:12px;padding:16px 20px;margin:22px 0}
+.nav2{display:flex;gap:12px;justify-content:space-between;margin-top:22px}
+.acct{background:rgba(255,255,255,.08);padding:20px;border-radius:12px;margin:14px 0;display:grid;gap:3px}
+.acct h5{color:var(--gold);font:700 1.05rem var(--head);margin-bottom:6px}
+.acct .btn{justify-self:start;margin-top:10px;padding:8px 18px;font-size:.88rem}
+.toast{display:none;color:var(--gold);font-weight:600;margin-top:8px}
+/* forms */
+label{display:block;font-weight:600;font-size:.92rem;margin-bottom:5px}
+input,select,textarea{width:100%;padding:12px 14px;border-radius:8px;border:1.5px solid #c3cbe0;font:inherit;background:#fff;color:var(--ink)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fgrid .full{grid-column:1/-1}
+.give label{color:#fff}
+.ok{display:none;background:#e6f6ea;color:#14532d;padding:16px 20px;border-radius:10px;margin-top:16px;font-weight:600}
+.give .ok{background:rgba(224,165,38,.2);color:#fff}
+/* contact */
+.contact-info{display:grid;gap:20px;margin-top:26px}
+.contact-info b{display:block;color:var(--ink);font-family:var(--head)}
+.contact-info a{color:var(--navy);font-weight:600}
+.form-box{background:var(--white);padding:34px;border-radius:16px}
+footer{background:var(--ink);color:#b7c1dc;padding:70px 0 26px;font-size:.95rem}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px}
+footer h4{color:#fff;font-size:1.05rem;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+footer img{height:56px;margin-bottom:12px}
+.copy{border-top:1px solid rgba(255,255,255,.15);margin-top:44px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.88rem}
+/* page-load reveal (hero only) */
+@media(prefers-reduced-motion:no-preference){.hero .wrap>*{animation:up .8s both}.hero .wrap>*:nth-child(2){animation-delay:.12s}.hero .wrap>*:nth-child(3){animation-delay:.24s}@keyframes up{from{opacity:0;transform:translateY(24px)}}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:900px){
+section{padding:70px 0}
+.menu{position:fixed;inset:76px 0 auto;background:var(--ink);flex-direction:column;padding:10px 6% 24px;gap:0;display:none}
+.menu.open{display:flex}.menu a{display:block;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.burger{display:block}
+.nav>.btn{display:none}
+.split,.vm-grid,.values,.prog-grid,.p-grid,.stats,.f-grid,.fgrid,.topics{grid-template-columns:1fr}
+.vm-grid>div+div{padding-left:0;border-left:0}
+.motto{position:static;margin-top:34px}
+.photo::after{display:none}
+.commission{background-attachment:scroll}
+}
+
+/* minimal refresh */
+section{padding:110px 0}
+.menu a{text-transform:lowercase;letter-spacing:.04em}
+.wrap>h2{text-align:center}
+.wrap>h2::after{content:"";display:block;width:48px;height:2px;background:var(--gold);margin:16px auto 0}
+.wrap>.lead{margin-left:auto;margin-right:auto;text-align:center;font-weight:300}
+.filters{justify-content:center}
+.value{background:none;border-radius:0;border-top:1px solid #c9d0e2;padding:26px 8px 10px}
+.prog{background:none;border:1px solid #dfe4f0;border-radius:0}
+.prog.feat{background:var(--navy);border-color:var(--navy)}
+.process{background:var(--white)}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px;position:relative;text-align:center}
+.flow::before{content:"";position:absolute;top:34px;left:16%;right:16%;border-top:1px dashed #aab4d0}
+.flow div{position:relative}
+.flow b{display:grid;place-items:center;width:68px;height:68px;margin:0 auto 18px;border-radius:50%;background:var(--white);border:2px solid var(--gold);font:300 1.6rem var(--head);color:var(--navy)}
+.flow p{color:var(--muted);max-width:34ch;margin:0 auto}
+.impact{background:var(--paper)}
+.stat{border-top:1px solid #c9d0e2}
+.stat b{color:var(--navy);font-weight:200}
+.gal{columns:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:0}
+.gal figure{margin:0;border-radius:0;aspect-ratio:1}
+.gal img{height:100%;object-fit:cover}
+.gal figcaption{inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;background:rgba(18,35,74,.8);opacity:0;transition:opacity .3s}
+.gal figure:hover figcaption{opacity:1}
+@media(hover:none){.gal figcaption{opacity:1;inset:auto 0 0;background:linear-gradient(transparent,rgba(13,23,51,.9));padding:24px 12px 10px}}
+@media(max-width:900px){section{padding:76px 0}.hero{background-attachment:scroll}.flow{grid-template-columns:1fr}.flow::before{display:none}.gal{grid-template-columns:1fr 1fr}}
+
+/* app mode */
+html{-webkit-tap-highlight-color:transparent}
+header{padding-top:env(safe-area-inset-top)}
+.tabs{display:none}
+#inst{display:none;position:fixed;left:12px;right:12px;bottom:20px;z-index:60;background:var(--ink);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:12px 14px;align-items:center;gap:12px;box-shadow:0 8px 30px rgba(0,0,0,.35);font-size:.92rem}
+#inst.show{display:flex}
+#inst span{flex:1}
+#inst .btn{padding:8px 18px;font-size:.9rem}
+#inst button.x{background:none;border:0;color:#fff;font-size:1.4rem;cursor:pointer;padding:0 4px}
+@media(max-width:900px){
+body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+.tabs{display:flex;position:fixed;inset:auto 0 0;z-index:55;background:rgba(13,23,51,.97);border-top:1px solid rgba(255,255,255,.15);padding-bottom:env(safe-area-inset-bottom)}
+.tabs a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 2px 8px;color:#aab4d0;text-decoration:none;font-size:.7rem;font-weight:600}
+.tabs svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tabs a.on{color:var(--gold)}
+#inst{bottom:calc(76px + env(safe-area-inset-bottom))}
+.burger{display:none}
+.menu{display:none!important}
+}
+@media(display-mode:standalone){footer .copy span:last-child{display:none}}
+</style>
+</head>
+<body>
+<header id="top">
+ <div class="wrap nav">
+  <a class="brand" href="#home"><img src="images/logo.png.png" alt="" onerror="this.style.display='none'"><span>Global Hope Evangelistic Mission Network</span></a>
+  <ul class="menu" id="menu">
+   <li><a href="#about">About</a></li><li><a href="#mission">Mission</a></li><li><a href="#programs">Programs</a></li><li><a href="#impact">Impact</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#partner">Partner</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="btn btn-gold" href="#partner">Partner With Us</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="wrap">
+  <h1 class="rotor" aria-label="Inspiring Hope. Changing Lives."><span class="w on" aria-hidden="true">inspiring hope</span><span class="w" aria-hidden="true">changing lives</span><span class="w" aria-hidden="true">winning souls</span><span class="w" aria-hidden="true">building lives</span></h1>
+  <p>Global Hope Evangelistic Mission Network (GHMEN) is a Christian non-profit and mission-driven organization committed to transforming lives through evangelism, discipleship, leadership development and values-based education.</p>
+  <div class="row"><a class="btn btn-gold" href="#about">Learn More</a><a class="btn btn-line" href="#partner">Partner With Us</a></div>
+  <blockquote class="motto">“Mobilizing, Training and Deploying Soul Winners.”</blockquote>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap split">
+  <div class="photo"><img src="images/gallery2.jpg.png" alt="Global Hope Evangelistic Mission Network ministry outreach" loading="lazy"></div>
+  <div>
+   <h2>Who we are</h2>
+   <p>Global Hope Evangelistic Mission Network is a Christ-centered, inter-denominational missionary organisation committed to proclaiming the gospel of Jesus Christ, reaching the lost, making disciples and mobilizing believers for the fulfilment of the Great Commission. We exist to inspire hope, transform lives through the power of the gospel, and equip men and women to become effective witnesses for Christ.</p>
+   <p style="margin-top:14px">Through evangelism, missions, discipleship, leadership development, youth outreach and strategic partnership with churches and like-minded ministries, we are raising and deploying passionate soul winners to communities and nations where Christ is yet to be fully known.</p>
+   <div class="chips"><span>Evangelism</span><span>Discipleship</span><span>Compassion and Love</span><span>Youth Outreach</span><span>Kingdom Leadership</span><span>Global Missions</span></div>
+   <a class="btn btn-navy" href="#mission">Our vision and mission</a>
+  </div>
+ </div>
+</section>
+
+<section class="vm" id="mission">
+ <div class="wrap">
+  <h2>Our vision and mission</h2>
+  <p class="lead" style="color:#c3cde8">Everything we do is anchored in a clear, God-given vision and a bold, Christ-centered mission.</p>
+  <div class="vm-grid">
+   <div><h3>Our Vision</h3><p>To see every community reached with the Gospel and every believer equipped to become an effective witness for Christ until the nations have heard.</p></div>
+   <div><h3>Our Mission</h3><p>To mobilize, train and deploy Soul Winners while advancing the gospel through Evangelism, Discipleship, Missions and Leadership Development.</p></div>
+  </div>
+  <p class="vm-tag">Inspiring Hope. Changing Lives.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2>What we stand for</h2>
+  <p class="lead">These values define who we are, how we operate, and what drives every decision we make as a ministry.</p>
+  <div class="values">
+   <div class="value"><h3>Christ Centered Living</h3><p>Jesus Christ is the foundation of our message, ministry and mission. We seek to glorify him in all we do.</p></div>
+   <div class="value"><h3>Evangelism and Missions</h3><p>We are passionate about reaching the lost, making disciples, planting churches and taking the gospel to every people group.</p></div>
+   <div class="value"><h3>Prayer and Dependency on the Holy Spirit</h3><p>Lasting spiritual impact comes through prayer and the empowering work of the Holy Spirit.</p></div>
+   <div class="value"><h3>Discipleship</h3><p>We nurture believers into mature followers of Jesus who will, in turn, disciple others.</p></div>
+   <div class="value"><h3>Compassion and Love</h3><p>We demonstrate the love of Christ through service, care, and practical ministry to individuals and communities.</p></div>
+   <div class="value"><h3>Global Impact</h3><p>We raise and deploy laborers who will carry the hope of the Gospel to every nation.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="process" id="process">
+ <div class="wrap">
+  <h2>how we work</h2>
+  <p class="lead">Mobilize, train and deploy: the path every laborer walks with us.</p>
+  <div class="flow">
+   <div><b>1</b><h3>Mobilize</h3><p>We call and gather Christ-centered believers who are ready to serve.</p></div>
+   <div><b>2</b><h3>Train</h3><p>We equip them in evangelism, discipleship, leadership and God's Word.</p></div>
+   <div><b>3</b><h3>Deploy</h3><p>We send them to schools, communities and nations to preach the gospel, make disciples and strengthen local churches.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="programs" id="programs">
+ <div class="wrap">
+  <h2>Our programs</h2>
+  <p class="lead">Through diverse and strategic programs, we reach people with the Gospel, build lives, and make an impact in communities and schools.</p>
+  <div class="prog-grid">
+   <article class="prog"><h3>Evangelism &amp; Soul Winning</h3><p>Reaching people with the Gospel of Jesus Christ through physical evangelism, mass evangelism, and targeted outreach across communities.</p><ul><li>Physical Evangelism</li><li>Mass Evangelism</li><li>Community Outreach</li></ul></article>
+   <article class="prog"><h3>Discipleship &amp; Bible Teaching</h3><p>Helping believers grow spiritually and develop a strong Kingdom lifestyle, sound character, and deep knowledge of God's Word.</p><ul><li>Bible Study Programs</li><li>Mentorship</li><li>Kingdom Teachings</li></ul></article>
+   <article class="prog"><h3>Healing &amp; Restoration</h3><p>Ministering hope, prayer, faith, and God's healing power to people who are broken, hurting, and in need of restoration.</p><ul><li>Prayer Ministration</li><li>Faith Ministry</li><li>Restoration Outreach</li></ul></article>
+   <article class="prog feat"><span class="tag">Featured program</span><h3>Student Life &amp; Value Seminar</h3><p>A school outreach program approved to reach secondary schools across Plateau State, inspiring students about life values, purpose, and character.</p><ul><li>Sexual Purity</li><li>Discipline &amp; Purpose</li><li>Addiction Prevention</li><li>Destiny &amp; Character</li></ul></article>
+   <article class="prog"><h3>Youth &amp; Sports Outreach</h3><p>Using sports and youth-centered activities as a platform for evangelism, discipleship, character development, and community impact.</p><ul><li>Sports Evangelism</li><li>Youth Programs</li><li>Character Development</li></ul></article>
+   <article class="prog"><h3>Social Media &amp; Digital Evangelism</h3><p>Using digital platforms to spread the Gospel, share Christian teachings, reach young people, and connect with people globally.</p><ul><li>Social Media Outreach</li><li>Online Teachings</li><li>Global Digital Reach</li></ul></article>
+  </div>
+ </div>
+</section>
+
+<section class="slvs" id="slvs">
+ <div class="wrap split">
+  <div>
+   <h2>Reaching students. Building values. Shaping futures.</h2>
+   <p>The <strong>Student Life and Value Seminar</strong> is an outreach initiative of Global Hope Evangelistic Mission Network designed to reach secondary school students with practical, life-changing teaching on:</p>
+   <div class="topics"><span>Sexual Purity</span><span>Discipline &amp; Purpose</span><span>Character Building</span><span>Addiction Prevention</span><span>Destiny Discovery</span><span>Personal Values</span></div>
+   <p class="approved"><strong style="color:var(--gold)">Approved</strong> to reach secondary schools across Plateau State.</p>
+   <a class="btn btn-gold" href="#partner">Support this program</a>
+  </div>
+  <div class="photo"><img src="images/gallery8.jpg.jpg" alt="Student Life and Value Seminar - school outreach program" loading="lazy"></div>
+ </div>
+</section>
+
+<section class="impact" id="impact">
+ <div class="wrap">
+  <h2>Our impact</h2>
+  <p class="lead" style="color:#1d2a52">By the grace of God, we continue to make a measurable difference in lives, schools, and communities.</p>
+  <div class="stats">
+   <div class="stat"><b data-count="160">0</b><h4>Schools Reached</h4><p>Secondary schools reached through the Student Life and Value Seminar.</p></div>
+   <div class="stat"><b data-count="15000">0</b><h4>Lives Touched</h4><p>Students, youth, and community members touched through our outreach.</p></div>
+   <div class="stat"><b data-count="7000">0</b><h4>Souls Reached</h4><p>People who have heard the Gospel and responded to salvation.</p></div>
+   <div class="stat"><b data-count="45">0</b><h4>Communities Impacted</h4><p>Communities reached through evangelism and Gospel proclamation.</p></div>
+   <div class="stat"><b data-count="200">0</b><h4>Outreach Programs</h4><p>Outreach activities, seminars, and evangelistic campaigns conducted.</p></div>
+   <div class="stat"><b data-count="10">0</b><h4>Volunteers &amp; Partners</h4><p>People standing with the ministry's vision and mission.</p></div>
+  </div>
+ </div>
+</section>
+
+<div class="verse"><div class="wrap"><blockquote>“Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Teaching them to observe all things whatsoever I have commanded you; and, lo, I am with you always, even unto the end of the world. Amen.”<cite>Matthew 28:19-20</cite></blockquote></div></div>
+
+<section class="commission">
+ <div class="wrap">
+  <h2>Taking the Gospel to the world</h2>
+  <p class="lead">We reach people wherever they are: in schools, communities, on social media, through sports, and across nations.</p>
+  <div class="pills"><span>Physical Evangelism</span><span>School Evangelism</span><span>Youth Outreach</span><span>Social Media</span><span>Radio Evangelism</span><span>TV Evangelism</span><span>Sports Evangelism</span><span>Mission Outreaches</span></div>
+  <a class="btn btn-gold" href="#partner">Join the mission</a>
+ </div>
+</section>
+
+<section id="gallery">
+ <div class="wrap">
+  <h2>In the field</h2>
+  <p class="lead">A glimpse into the work God is doing through our seminars, youth programs and outreaches.</p>
+  <div class="filters" role="group" aria-label="Filter gallery"><button class="on" data-f="all">All</button><button data-f="sem">Seminars</button><button data-f="sport">Youth and Sport Outreach</button><button data-f="com">Community</button></div>
+  <div class="gal">
+   <figure data-c="sem"><img loading="lazy" src="images/gallery5.jpg.jpg" alt="Students Life and Value Seminar"><figcaption>Student Life and Value Seminar</figcaption></figure>
+   <figure data-c="sport"><img loading="lazy" src="images/sport.png.png" alt="Youth and sports outreach"><figcaption>Youth and Sport Outreach</figcaption></figure>
+   <figure data-c="sem"><img loading="lazy" src="images/gallery9.jpg.png" alt="Seminar in a secondary school"><figcaption>Student Life and Value Seminar</figcaption></figure>
+   <figure data-c="com"><img loading="lazy" src="images/outreach2.jpg.jpeg" alt="Reaching communities with the message of Christ"><figcaption>Community Outreach</figcaption></figure>
+   <figure data-c="sem"><img loading="lazy" src="images/gallery3.jpg.jpg" alt="Student Life and Value Seminar"><figcaption>Student Life and Value Seminar</figcaption></figure>
+   <figure data-c="sport"><img loading="lazy" src="images/sport2.png.png" alt="Youth and sport outreach"><figcaption>Youth and Sport Outreach</figcaption></figure>
+   <figure data-c="com"><img loading="lazy" src="images/outreach.jpg.png" alt="Gospel outreach and soul winning"><figcaption>Gospel Outreach</figcaption></figure>
+   <figure data-c="sem"><img loading="lazy" src="images/gallery4.jpg.jpg" alt="Student Life and Value Seminar"><figcaption>Student Life and Value Seminar</figcaption></figure>
+   <figure data-c="sport"><img loading="lazy" src="images/sport4.png.png" alt="Sport outreach"><figcaption>Sport Outreach</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="partner" id="partner">
+ <div class="wrap">
+  <h2>Partner with us</h2>
+  <p class="lead">The work of reaching lives and advancing God's Kingdom needs people willing to stand with the mission. Choose how you would like to partner with us.</p>
+  <div class="p-grid">
+   <div class="p-card"><h3>Prayer Partners</h3><p>Commit to praying regularly for the ministry, its programs, its team, and the lives being reached.</p><a class="btn btn-navy" href="#contact">Become a Prayer Partner</a></div>
+   <div class="p-card"><h3>Financial Partners</h3><p>Fund outreaches, school seminars, evangelism campaigns, and other ministry programs.</p><a class="btn btn-gold" href="#give">Partner Financially</a></div>
+   <div class="p-card"><h3>Outreach Partners</h3><p>Join our evangelism teams to take the Gospel to schools, communities, and youth in your area.</p><a class="btn btn-navy" href="#contact">Become an Outreach Partner</a></div>
+   <div class="p-card"><h3>Volunteer Partners</h3><p>Offer your time, skills, and talents in programs, events, administration, media, or teaching.</p><a class="btn btn-navy" href="#contact">Become a Volunteer</a></div>
+   <div class="p-card"><h3>Church &amp; Ministry Partners</h3><p>Partner as a church or ministry to collaborate on evangelism, discipleship, and Kingdom advancement.</p><a class="btn btn-navy" href="#contact">Partner With Us</a></div>
+   <div class="p-card"><h3>Support the Mission</h3><p>Every seed sown into this ministry is an investment in souls, lives, schools, and communities. “How beautiful are the feet of those who bring good news!” (Romans 10:15)</p></div>
+  </div>
+
+  <div class="give" id="give">
+   <h3>Financial partnership</h3>
+   <div class="steps"><span class="on" data-s="1">1 Partnership type</span><span data-s="2">2 Frequency &amp; amount</span><span data-s="3">3 Account details</span></div>
+
+   <div class="pane on" data-p="1">
+    <p>Select the type of financial partnership that reflects your commitment.</p>
+    <div class="opts" data-key="type">
+     <button class="opt" data-v="One-Time Gift"><strong>One-Time Gift</strong>A single contribution, any time. No recurring commitment.</button>
+     <button class="opt" data-v="Short-Term Partnership"><strong>Short-Term Partnership</strong>Support for a defined period. <small>1 – 6 months</small></button>
+     <button class="opt" data-v="Long-Term Partnership"><strong>Long-Term Partnership</strong>An ongoing commitment for lasting impact. <small>6+ months</small></button>
+     <button class="opt" data-v="Project-Based Partnership"><strong>Project-Based Partnership</strong>Fund a school seminar, crusade, or youth program. <small>Targeted support</small></button>
+    </div>
+    <div class="nav2"><span></span><button class="btn btn-gold" data-go="2">Continue</button></div>
+   </div>
+
+   <div class="pane" data-p="2">
+    <h4>Giving frequency</h4>
+    <div class="opts" data-key="freq">
+     <button class="opt" data-v="Weekly">Weekly<br><small>Every 7 days</small></button><button class="opt" data-v="Every 2 Weeks">Every 2 Weeks<br><small>Fortnightly</small></button><button class="opt" data-v="Monthly">Monthly<br><small>Once a month</small></button><button class="opt" data-v="Every 3 Months">Every 3 Months<br><small>Quarterly</small></button><button class="opt" data-v="Every 6 Months">Every 6 Months<br><small>Bi-annually</small></button><button class="opt" data-v="Yearly">Yearly<br><small>Once a year</small></button><button class="opt" data-v="One-Time">One-Time<br><small>Single gift</small></button>
+    </div>
+    <h4>Contribution amount</h4>
+    <div class="opts" data-key="amt" id="amts"></div>
+    <div class="custom"><span>Or enter a custom amount: ₦</span><input type="number" min="0" id="customAmt" aria-label="Custom amount in naira"></div>
+    <p style="font-size:.88rem;margin-top:10px">Amounts are in Nigerian Naira (₦). If you are giving from outside Nigeria, please contact us for international transfer details.</p>
+    <div class="summary"><strong>Your partnership summary</strong><br>Type: <span id="sT">—</span><br>Frequency: <span id="sF">—</span><br>Amount: <span id="sA">—</span></div>
+    <div class="nav2"><button class="btn btn-line" data-go="1">Back</button><button class="btn btn-gold" data-go="3">Continue</button></div>
+   </div>
+
+   <div class="pane" data-p="3">
+    <p>Thank you for choosing to partner with us. Use the account details below, then tell us about your gift using the form.</p>
+    <div class="summary"><strong>Your partnership plan</strong><br><span id="sAll">—</span></div>
+    <div class="acct"><h5>Primary account</h5><span>Bank: First Bank of Nigeria</span><span>Account name: Global Hope Evangelistic Mission Network</span><span>Account number: <b>2048258751</b></span><span>Type: Savings</span><button class="btn btn-line" data-copy="First Bank of Nigeria | Global Hope Evangelistic Mission Network | 2048258751">Copy details</button></div>
+    <div class="acct"><h5>Secondary account</h5><span>Bank: ECO Bank</span><span>Account name: Global Hope Evangelistic Mission Network</span><span>Account number: <b>4680104479</b></span><span>Type: Savings</span><button class="btn btn-line" data-copy="ECO Bank | Global Hope Evangelistic Mission Network | 4680104479">Copy details</button></div>
+    <div class="acct"><h5>Mobile account</h5><span>Bank: Moniepoint MFB</span><span>Account name: Global Hope Evangelistic Mission Network</span><span>Account number: <b>6486775376</b></span><span>Type: Savings</span><button class="btn btn-line" data-copy="Moniepoint MFB | Global Hope Evangelistic Mission Network | 6486775376">Copy details</button></div>
+    <p class="toast" id="toast">Account details copied.</p>
+    <h4>Notify us after giving</h4>
+    <form name="giving-notification" method="POST" data-netlify="true" class="fgrid" id="giveForm">
+     <input type="hidden" name="form-name" value="giving-notification">
+     <div><label for="gn">Full name *</label><input id="gn" name="name" required></div>
+     <div><label for="ge">Email address *</label><input id="ge" name="email" type="email" required></div>
+     <div><label for="gp">Phone number</label><input id="gp" name="phone" type="tel"></div>
+     <div><label for="ga">Amount given (₦) *</label><input id="ga" name="amount" type="number" required></div>
+     <div><label for="gt">Partnership type</label><input id="gt" name="type" readonly></div>
+     <div><label for="gf">Giving frequency</label><input id="gf" name="frequency" readonly></div>
+     <div class="full"><label for="gm">Additional note (optional)</label><textarea id="gm" name="note" rows="3"></textarea></div>
+     <div class="full"><button class="btn btn-gold" type="submit">Send notification</button></div>
+    </form>
+    <p class="ok" id="giveOk">Notification received. Thank you for your generous partnership. We will acknowledge your gift and keep you in our prayers. God bless you!</p>
+    <div class="nav2"><button class="btn btn-line" data-go="2">Back</button><span></span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap split" style="align-items:start">
+  <div>
+   <h2>Contact us</h2>
+   <p class="lead">Whether you want to partner, volunteer, ask a question, or connect with the ministry, reach out today.</p>
+   <div class="contact-info">
+    <div><b>Email</b><a href="mailto:globalhopeevangelisticmissionn@gmail.com">globalhopeevangelisticmissionn@gmail.com</a></div>
+    <div><b>Call</b><a href="tel:+2348136342661">+234 813 634 2661</a></div>
+    <div><b>WhatsApp</b><a href="https://wa.me/2348136342661">Chat with us on WhatsApp</a></div>
+    <div><b>Location</b>Plateau State, Nigeria</div>
+    <div><b>Follow us</b><a href="https://www.facebook.com/GHEmissions">Facebook: GHEmissions</a></div>
+   </div>
+  </div>
+  <div class="form-box">
+   <h3>Send us a message</h3>
+   <form name="contact" method="POST" data-netlify="true" class="fgrid" id="contactForm" style="margin-top:16px">
+    <input type="hidden" name="form-name" value="contact">
+    <div><label for="cn">Full name *</label><input id="cn" name="name" required></div>
+    <div><label for="ce">Email address *</label><input id="ce" name="email" type="email" required></div>
+    <div><label for="cp">Phone number</label><input id="cp" name="phone" type="tel"></div>
+    <div><label for="cs">Subject *</label><select id="cs" name="subject" required><option value="">Select a subject</option><option>Partnership Inquiry</option><option>Volunteer Interest</option><option>Donation / Financial Support</option><option>Student Life &amp; Value Seminar</option><option>Prayer Request</option><option>General Inquiry</option></select></div>
+    <div class="full"><label for="cm">Message *</label><textarea id="cm" name="message" rows="5" required></textarea></div>
+    <div class="full"><button class="btn btn-navy" type="submit">Send message</button></div>
+   </form>
+   <p class="ok" id="contactOk">Message sent. Thank you for reaching out. We will get back to you soon.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="f-grid">
+   <div><img src="images/logo.png.png" alt="" onerror="this.style.display='none'"><h4>Global Hope Evangelistic Mission Network</h4><p>Inspiring Hope, Changing Lives. Leading people into God's Kingdom globally and establishing Kingdom lifestyle and character worldwide.</p></div>
+   <div><h4>Quick links</h4><ul><li><a href="#about">About</a></li><li><a href="#mission">Mission</a></li><li><a href="#programs">Programs</a></li><li><a href="#impact">Impact</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#partner">Partner</a></li></ul></div>
+   <div><h4>Programs</h4><ul><li><a href="#programs">Evangelism &amp; Soul Winning</a></li><li><a href="#programs">Discipleship &amp; Bible Teaching</a></li><li><a href="#programs">Healing &amp; Restoration</a></li><li><a href="#slvs">Student Life &amp; Value Seminar</a></li><li><a href="#programs">Youth &amp; Sports Outreach</a></li></ul></div>
+   <div><h4>Reach us</h4><ul><li>Bukuru, Jos South LG, Plateau State, Nigeria.</li><li><a href="tel:+2348136342661">+234 813 634 2661</a></li><li><a href="mailto:globalhopeevangelisticmissionn@gmail.com">Email us</a></li><li><a href="https://wa.me/2348136342661">WhatsApp</a></li><li><a href="https://www.facebook.com/GHEmissions">Facebook</a></li></ul></div>
+  </div>
+  <div class="copy"><span>© 2026 Global Hope Evangelistic Mission Network. All rights reserved.</span><span>Inspiring Hope. Changing Lives.</span></div>
+ </div>
+</footer>
+<nav class="tabs" aria-label="App navigation">
+ <a href="#home" data-t="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/></svg>Home</a>
+ <a href="#programs" data-t="programs"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Programs</a>
+ <a href="#gallery" data-t="gallery"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>Gallery</a>
+ <a href="#give" data-t="partner"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></svg>Give</a>
+ <a href="#contact" data-t="contact"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Contact</a>
+</nav>
+<div id="inst" role="dialog" aria-label="Install app"><span id="instTxt">Install the Global Hope app on your phone.</span><button class="btn btn-gold" id="instBtn">Install</button><button class="x" id="instX" aria-label="Dismiss">×</button></div>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+// nav
+const hd=$('#top'),mn=$('#menu'),bg=$('#burger');
+const sc=()=>hd.classList.toggle('solid',scrollY>40);sc();addEventListener('scroll',sc,{passive:true});
+bg.onclick=()=>{const o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+$$('#menu a').forEach(a=>a.onclick=()=>mn.classList.remove('open'));
+// hero word rotator
+(()=>{const w=$$('.rotor .w');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;let i=0;
+setInterval(()=>{w[i].classList.remove('on');i=(i+1)%w.length;w[i].classList.add('on')},3200)})();
+// counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
+ const el=e.target,t=+el.dataset.count;if(!t)return;let n=0;const st=Math.max(1,Math.ceil(t/60));
+ const id=setInterval(()=>{n=Math.min(t,n+st);el.textContent=n.toLocaleString();if(n>=t)clearInterval(id)},25)}),{threshold:.5});
+$$('[data-count]').forEach(b=>io.observe(b));
+// gallery filter
+$$('.filters button').forEach(b=>b.onclick=()=>{$$('.filters button').forEach(x=>x.classList.toggle('on',x===b));
+ $$('.gal figure').forEach(f=>f.style.display=(b.dataset.f==='all'||f.dataset.c===b.dataset.f)?'':'none')});
+// giving flow
+const S={type:'',freq:'',amt:''};
+const fmt=a=>a?'₦'+(+a).toLocaleString():'—';
+$('#amts').innerHTML=[2500,5000,10000,15000,20000,50000].map(a=>`<button class="opt" data-v="${a}">${fmt(a)}</button>`).join('');
+function upd(){$('#sT').textContent=S.type||'—';$('#sF').textContent=S.freq||'—';$('#sA').textContent=fmt(S.amt);
+ $('#sAll').textContent=[S.type,S.freq,S.amt&&fmt(S.amt)].filter(Boolean).join(' · ')||'—';
+ $('#gt').value=S.type;$('#gf').value=S.freq;if(S.amt)$('#ga').value=S.amt}
+$$('.opts').forEach(g=>g.onclick=e=>{const b=e.target.closest('.opt');if(!b)return;
+ $$('.opt',g).forEach(x=>x.classList.toggle('on',x===b));S[g.dataset.key]=b.dataset.v;
+ if(g.dataset.key==='amt')$('#customAmt').value='';upd()});
+$('#customAmt').oninput=e=>{$$('#amts .opt').forEach(x=>x.classList.remove('on'));S.amt=e.target.value;upd()};
+function go(n){$$('.pane').forEach(p=>p.classList.toggle('on',p.dataset.p==n));$$('.steps span').forEach(s=>s.classList.toggle('on',s.dataset.s==n));$('#give').scrollIntoView({behavior:'smooth'})}
+$$('[data-go]').forEach(b=>b.onclick=()=>{const n=b.dataset.go;
+ if(n==2&&!S.type)return alert('Please choose a partnership type.');
+ if(n==3&&(!S.freq||!S.amt))return alert('Please choose a frequency and an amount.');go(n)});
+$$('[data-copy]').forEach(b=>b.onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(b.dataset.copy);const t=$('#toast');t.style.display='block';setTimeout(()=>t.style.display='none',2500)});
+// forms (Netlify Forms)
+function wire(fid,okid){const f=$(fid);f.onsubmit=async e=>{e.preventDefault();
+ try{await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
+ f.style.display='none';$(okid).style.display='block'}catch(x){alert('Could not send. Please try again or contact us on WhatsApp.')}}}
+wire('#giveForm','#giveOk');wire('#contactForm','#contactOk');
+// app: service worker + install prompt + tab highlight
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+let dp=null;const inst=$('#inst'),standalone=matchMedia('(display-mode:standalone)').matches||navigator.standalone;
+const seen=()=>{try{return localStorage.getItem('instX')}catch(e){return 1}};
+$('#instX').onclick=()=>{inst.classList.remove('show');try{localStorage.setItem('instX','1')}catch(e){}};
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;if(!standalone&&!seen())inst.classList.add('show')});
+$('#instBtn').onclick=async()=>{if(!dp)return;dp.prompt();await dp.userChoice;dp=null;inst.classList.remove('show')};
+addEventListener('appinstalled',()=>inst.classList.remove('show'));
+if(/iphone|ipad|ipod/i.test(navigator.userAgent)&&!standalone&&!seen()){$('#instTxt').textContent='To install: tap Share, then Add to Home Screen.';$('#instBtn').style.display='none';inst.classList.add('show')}
+const tabs=$$('.tabs a'),map={home:'home',programs:'programs',gallery:'gallery',partner:'partner',contact:'contact'};
+const to=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)tabs.forEach(t=>t.classList.toggle('on',t.dataset.t===e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+Object.keys(map).forEach(id=>{const el=document.getElementById(id);el&&to.observe(el)});
+</script>
+</body>
+</html>
